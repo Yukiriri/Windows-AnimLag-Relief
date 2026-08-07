@@ -15,6 +15,9 @@ nvidia-smi -lmc 800,-1
 > `-lmc`设置的是GPU显存频率，第1个数字是最低频率，第2个是上限频率（实际受出厂频率和温控影响）  
 > 2个频率最好能同步对齐  
 
+> [!IMPORTANT]  
+> 需要管理员权限运行  
+
 ## 重置修改
 ```
 nvidia-smi -rgc
@@ -29,7 +32,7 @@ nvidia-smi -q -d SUPPORTED_CLOCKS | findstr Memory
 比如RTX50显卡可以提到1000MHZ，之前的都是800MHZ  
 
 > [!IMPORTANT]  
-> 都需要管理员权限运行  
+> 需要管理员权限运行  
 
 > [!NOTE]  
 > 这个修改仅够维持本次开机，严格来说只能维持本次驱动会话，驱动状态更改后就被重置  
